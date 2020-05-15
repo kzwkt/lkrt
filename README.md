@@ -30,6 +30,15 @@ non-interactive (embeddable) tooling for gaining root privileges.
 While the primary target for this project is android devices, this library
 could theoretically be used on any device running a Linux kernel.
 
+## Compiling
+
+This project utilizes the kbuild system from the Linux kernel.
+For more information read [kbuild](doc/kbuild).
+
+```sh
+make menuconfig
+```
+
 ## License
 
 ### liblkrt
