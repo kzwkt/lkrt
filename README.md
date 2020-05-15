@@ -36,7 +36,8 @@ This project utilizes the kbuild system from the Linux kernel.
 For more information read [kbuild](doc/kbuild).
 
 ```sh
-make menuconfig
+make menuconfig # generate .config
+make
 ```
 
 ## License
