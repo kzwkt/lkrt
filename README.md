@@ -32,15 +32,29 @@ could theoretically be used on any device running a Linux kernel.
 
 ## License
 
-SPDX-License-Identifier: [GPL-3.0-or-later](COPYING)
+### liblkrt
+
+SPDX-License-Identifier: [GPL-3.0-or-later](COPYING.lkrt)
+
+### kbuild
+
+SPDX-License-Identifier: [GPL-2.0-only](COPYING.kbuild)
+
+### kbuild-template
+
+SPDX-License-Identifier: [BSD-3-Clause](COPYING.kbuild-template)
 
 ## Reference
 
 - [Android/Root - Gentoo Wiki](https://wiki.gentoo.org/wiki/Android/Root)
+
 - [Dirty COW (CVE-2016-5195)](https://dirtycow.ninja)
+
 - [[UNIVERSAL GUIDE] Root Any Android Device Manually!](https://forum.xda-developers.com/showthread.php?t=2684210)
 
 ## See Also
 
 - [Metasploit](https://www.metasploit.com)
+
 - [Drammer](https://www.vusec.net/projects/drammer)
+
