@@ -1,0 +1,19 @@
+include:
+  template: Dependency-Scanning.gitlab-ci.yml
+
+image: gcc
+
+allyesconfig:
+  stage: build
+  before_script:
+    - make allyesconfig
+  script:
+    - make
+
+flawfinder:
+  stage: test
+  before_script:
+    - apt update
+    - apt install -y flawfinder
+  script:
+    - flawfinder .
