@@ -40,7 +40,8 @@
 #
 /tags
 /TAGS
-/myapp
+/tmp
+/lkrt
 
 #
 # git files that we don't want to ignore even if they are dot-files

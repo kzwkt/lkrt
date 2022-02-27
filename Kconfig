@@ -90,15 +90,9 @@ config DEBUG_INFO_DWARF4
 	  But it significantly improves the success of resolving
 	  variables in gdb on optimized code.
 
-
 endmenu
-
 
 source "src/Kconfig"
 
 source "lib/Kconfig"
-
-
-
-
 
