@@ -17,3 +17,10 @@ flawfinder:
     - apt install -y flawfinder
   script:
     - flawfinder .
+
+reuse:
+  image:
+    name: fsfe/reuse:latest
+    entrypoint: [""]
+  script:
+    - reuse lint
