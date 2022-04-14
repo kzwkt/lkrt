@@ -4,6 +4,7 @@ include:
 image: gcc
 
 allyesconfig:
+  allow_failure: true
   stage: build
   before_script:
     - make allyesconfig
