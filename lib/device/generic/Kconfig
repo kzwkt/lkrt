@@ -1,0 +1,10 @@
+menuconfig DEVICE_GENERIC
+	bool "Enable generic device"
+	default y
+
+if DEVICE_GENERIC
+
+source "lib/device/generic/common/Kconfig"
+
+endif # DEVICE_GENERIC
+

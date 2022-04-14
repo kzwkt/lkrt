@@ -1,17 +1,6 @@
-config ENABLE_FOO_BAR
-	bool "Enable Foo / Bar options"
+config ENABLE_CLI
+	bool "Enable Command-line Interface"
 	default y
 	help
-	  Say Y if you want to enable foo or foobar functionality.
+	  Say Y if you want to enable the command-line interface.
 
-config FOO
-	bool "Foo"
-    depends on ENABLE_FOO_BAR
-	help
-	  foo.
-
-config BAR
-	bool "Bar"
-	depends on FOO
-	help
-	  bar.

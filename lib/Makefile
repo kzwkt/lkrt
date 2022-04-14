@@ -1,2 +1,1 @@
-lib-$(CONFIG_LOG_ENABLE) += logmsg.o
-
+obj-y := kernel.o 

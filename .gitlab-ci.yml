@@ -17,3 +17,4 @@ flawfinder:
     - apt install -y flawfinder
   script:
     - flawfinder .
+
