@@ -1,7 +1,8 @@
+#include <generated/autoconf.h>
+#include <generated/version.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-#include "lkrt.h"
+#include <lkrt.h>
 
 void print_usage(int status)
 {
@@ -23,7 +24,7 @@ void print_usage(int status)
 
 void print_version(int status)
 {
-	printf("%s version %s\n", PROGRAM_NAME, VERSION);
+	printf("%s version %s\n", PROGRAM_NAME, PROGRAM_VERSION);
 	exit(status);
 }
 

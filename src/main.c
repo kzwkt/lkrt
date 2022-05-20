@@ -1,12 +1,10 @@
+#include <generated/autoconf.h>
 #include <getopt.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
-#ifdef CONFIG_ENABLE_CLI
-#include "lkrt.h"
-#endif
+#include <lkrt.h>
 
 int main(int argc, char **argv)
 {

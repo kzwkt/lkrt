@@ -1,11 +1,9 @@
-#ifndef _SECURITY_KRT_APPL_H
-#define _SECURITY_KRT_APPL_H
+#ifndef _SECURITY_KRT_APPL_H_
+#define _SECURITY_KRT_APPL_H_
 
-#ifndef VERSION
-#define VERSION "0.0.1"
-#endif
+#include <generated/autoconf.h>
 
 void detect_kernel_version(void);
 
-#endif /* _SECURITY_KRT_APPL_H */
+#endif /* _SECURITY_KRT_APPL_H_ */
 

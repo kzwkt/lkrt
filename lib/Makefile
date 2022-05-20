@@ -1,1 +1,1 @@
-obj-y := kernel.o 
+lib-y := kernel.o 

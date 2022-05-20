@@ -2,7 +2,7 @@ VERSION = 1
 PATCHLEVEL = 0
 SUBLEVEL = 0
 EXTRAVERSION =
-NAME = KBuild Template
+NAME = Linux Kernel Root
 
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
@@ -258,13 +258,13 @@ NOSTDINC_FLAGS  =
 CFLAGS_KERNEL	=
 AFLAGS_KERNEL	=
 
-# Use MYAPPINCLUDE when you must reference the include/ directory.
+# Use LKRTINCLUDE when you must reference the include/ directory.
 # Needed to be compatible with the O= option
-MYAPPINCLUDE    := \
+LKRTINCLUDE    := \
 		$(if $(KBUILD_SRC), -I$(srctree)/include) \
 		-Iinclude -include include/generated/autoconf.h
 
-KBUILD_CPPFLAGS := -D__MYAPP__
+KBUILD_CPPFLAGS := -D__LKRT__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
@@ -284,7 +284,7 @@ export CPP AR NM STRIP OBJCOPY OBJDUMP
 export MAKE AWK PERL PYTHON
 export HOSTCXX HOSTCXXFLAGS CHECK CHECKFLAGS
 
-export KBUILD_CPPFLAGS NOSTDINC_FLAGS MYAPPINCLUDE OBJCOPYFLAGS LDFLAGS
+export KBUILD_CPPFLAGS NOSTDINC_FLAGS LKRTINCLUDE OBJCOPYFLAGS LDFLAGS
 export KBUILD_CFLAGS CFLAGS_KERNEL
 export KBUILD_AFLAGS AFLAGS_KERNEL
 export KBUILD_AFLAGS_KERNEL KBUILD_CFLAGS_KERNEL
@@ -636,9 +636,9 @@ prepare: prepare0
 # needs to be updated, so this check is forced on all builds
 
 define filechk_version.h
-	(echo \#define MYAPP_VERSION_CODE $(shell                         \
+	(echo \#define LKRT_VERSION_CODE $(shell                          \
 	expr $(VERSION) \* 65536 + 0$(PATCHLEVEL) \* 256 + 0$(SUBLEVEL)); \
-	echo '#define MYAPP_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))';)
+	echo '#define LKRT_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))';)
 endef
 
 $(version_h): $(srctree)/Makefile FORCE

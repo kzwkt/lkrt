@@ -1,16 +1,15 @@
-#ifndef LKRT_H
-#define LKRT_H
+#ifndef _LKRT_H_
+#define _LKRT_H_
 
-#ifndef VERSION
-#define VERSION "0.0.1"
-#endif
+#include <generated/autoconf.h>
 
 #define PROGRAM_NAME "lkrt"
-#define PROGRAM_DESCRIPTION "Linux Kernel Root."
+#define PROGRAM_DESCRIPTION "Linux Kernel Root"
+#define PROGRAM_VERSION "1.0.0"
 
 void print_usage(int status);
 
 void print_version(int status);
 
-#endif /* LKRT_H */
+#endif /* _LKRT_H_ */
 
