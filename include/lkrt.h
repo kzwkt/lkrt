@@ -11,5 +11,4 @@ void print_usage(int status);
 
 void print_version(int status);
 
-#endif /* _LKRT_H_ */
-
+#endif                          /* _LKRT_H_ */

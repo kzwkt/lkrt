@@ -3,7 +3,10 @@
 
 #include <generated/autoconf.h>
 
-void detect_kernel_version(void);
+struct kernel_version {
+    long major, minor, patch;
+};
 
-#endif /* _SECURITY_KRT_APPL_H_ */
+int detect_kernel_version(struct kernel_version *kver);
 
+#endif                          /* _SECURITY_KRT_APPL_H_ */
