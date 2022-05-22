@@ -5,7 +5,7 @@
 
 #define PROGRAM_NAME "lkrt"
 #define PROGRAM_DESCRIPTION "Linux Kernel Root"
-#define PROGRAM_VERSION "1.0.0"
+#define PROGRAM_VERSION "0.1.0"
 
 void print_usage(int status);
 
