@@ -7,7 +7,41 @@ menuconfig EXPLOIT
 
 if EXPLOIT
 
-source "lib/device/Kconfig"
+menu "Devices"
+
+comment "Directory structure coincides with android device tree"
+
+# See: https://android.googlesource.com/device
+
+menuconfig DEVICE_GENERIC
+	bool "Enable generic device"
+	default y
+
+if DEVICE_GENERIC
+
+menuconfig DEVICE_GENERIC_COMMON
+	bool "Enable generic device common"
+	default y
+
+if DEVICE_GENERIC_COMMON
+
+config DIRTY_COW
+	bool "Dirty COW (CVE-2016-5195)"
+	default n
+	help
+	  Say Y if you want to enable the dirty cow exploit.
+
+config ROOT_HELPER
+	bool "roothelper"
+	default n
+	help
+	  Say Y if you want to enable the roothelper exploit.
+
+endif # DEVICE_GENERIC_COMMON
+
+endif # DEVICE_GENERIC
+
+endmenu
 
 endif # EXPLOIT
 
